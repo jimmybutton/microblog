@@ -17,3 +17,6 @@ class Config(object):
 
     # display settings
     POSTS_PER_PAGE = 10
+
+    # translation API
+    MS_TRANSLATOR_KEY = os.environ.get('MS_TRANSLATOR_KEY')
