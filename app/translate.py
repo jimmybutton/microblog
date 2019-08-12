@@ -25,6 +25,8 @@ def translate(text, source_language, dest_language):
 
     response = requests.post(constructed_url, headers=headers, json=body)
     if response.status_code != 200:
-        return 'Error {}: the translation service failed.'.format(response.status_code)
+        return 'Error {}: the translation service failed. URL {} Body {}'.format(response.status_code, constructed_url, body)
 
-    return response.json()
+    content = response.json()
+    
+    return content[0].get('translations')[0].get('text')
