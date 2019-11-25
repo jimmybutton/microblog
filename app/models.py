@@ -20,6 +20,8 @@ class User(UserMixin, db.Model):
     posts = db.relationship('Post', backref='author', lazy='dynamic')
     about_me = db.Column(db.String(140))
     last_seen = db.Column(db.DateTime, default=datetime.utcnow)
+    # followed are the users that this users follows
+    # followers are the users that follow this user
     followed = db.relationship(
         'User', secondary=followers,
         primaryjoin=(followers.c.follower_id == id),
@@ -52,6 +54,8 @@ class User(UserMixin, db.Model):
 
     def followed_posts(self):
         """Shows the followed post along with the users own posts."""
+        # first do a join of posts with followers table and then filter on posts to get 
+        # only the posts by users that this user is following
         followed = Post.query.join(
             followers, (followers.c.followed_id == Post.user_id)).filter(
                 followers.c.follower_id == self.id)
