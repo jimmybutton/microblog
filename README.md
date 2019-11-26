@@ -3,10 +3,18 @@ My version of Miguel Grinberg's excelent [flask tutorial](https://blog.miguelgri
 
 ## start app
 In the command line type:
-`flask run`
+```
+flask run
+```
 
 ## Setting env variables
 $env:MS_TRANSLATOR_KEY = "lkj..."
+
+## Start debug SMTP server
+in separate shell (Debug mode must be off)
+```
+python -m smtpd -n -c DebuggingServer localhost:8025
+```
 
 ## Users:
 samuel, pw: dog
