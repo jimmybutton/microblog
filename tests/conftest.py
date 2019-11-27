@@ -5,7 +5,7 @@ from app import app, db
 
 @pytest.fixture
 def app_fixture():
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite://'
+    current_app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite://'
     db.create_all()
 
     yield app, db
