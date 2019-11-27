@@ -23,3 +23,6 @@ class Config(object):
 
     # translation API
     MS_TRANSLATOR_KEY = os.environ.get('MS_TRANSLATOR_KEY')
+
+    # elastic search
+    ELASTICSEARCH_URL = os.environ.get('ELASTICSEARCH_URL')

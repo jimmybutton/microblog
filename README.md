@@ -2,6 +2,11 @@
 My version of Miguel Grinberg's excelent [flask tutorial](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world).
 
 ## start app
+start elastic search
+```
+C:\elasticsearch-7.4.2\bin\elasticsearch.bat
+```
+
 In the command line type:
 ```
 flask run
