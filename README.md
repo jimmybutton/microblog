@@ -1,5 +1,5 @@
 # microblog
-My version of Miguel Grinberg's excelent [flask tutorial](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world).
+My version of Miguel Grinberg's excellent [flask tutorial](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world).
 
 ## start app
 start elastic search
@@ -24,4 +24,3 @@ python -m smtpd -n -c DebuggingServer localhost:8025
 ## Users:
 samuel, pw: dog
 susan, pw: cat
-Rebekka, 123
